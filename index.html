@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome books one</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <nav>
+          <a href>Awesome Books</a>
+          <ul class="nav-links" id="nav_links">
+            <li>
+              <a class="link active" href="#books-container">List</a>
+            </li>
+            <li>
+              <a class="link" href="#form-section">Add New</a>
+            </li>
+            <li>
+              <a class="link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="time">
+          <time id="time"></time>
+        </div>
+      </header>
+
+      <main id="main-page">
+        <section class="books_Container" id="books-container">
+          <h2>All Awesome Books</h2>
+          <article class="booklist" id="bookList">
+
+          </article>
+          <!--<div class="divider"></div>-->
+        </section>
+
+        <section id="form-section">
+          <h2>Add a new book</h2>
+          <form id="form">
+            <input id="title" type="text" placeholder="Title">
+            <br>
+            <br>
+            <input id="author" type="text" placeholder="Autor">
+            <br><br>
+            <button id="add" type="submit">Add</button>
+          </form>
+        </section>
+
+        <section class="contact" id="contact-section">
+          <h2>Contact Information</h2>
+          <p>Do you have any questions or you just want to say hello?
+            You can reach out to us:</p>
+          <ul>
+            <li>Our mail:<i><a href="mailto:anoldmwawasi@gmail.com, noelsobryant@gmail.com">anoldmwawasi@gmail.com or
+                  noelsobryant@gmail.com </a></i> </li>
+            <li>Our phone number : +254757338173/ +254717231495 </li>
+            <li>Our address: Kenya </li>
+          </ul>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p>&copy Copyright</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
