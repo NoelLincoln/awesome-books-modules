@@ -1,7 +1,18 @@
-import renderBooks from './modules/RenderBooks.js';
-import InitializeApp from './modules/InitializeApp.js';
-import addBook from './modules/AddBooks.js';
+import BookManager from './modules/BookManager.js';
+import GetTime from './modules/GetTime.js';
+import navHandler from './modules/NavigationHandler.js';
 
-InitializeApp();
-renderBooks();
-addBook();
+function initializeApp() {
+  const app = new BookManager();
+
+  document.getElementById('form-section').style.display = 'none';
+  document.getElementById('contact-section').style.display = 'none';
+
+  navHandler();
+  app.navHandler();
+  return app;
+}
+
+GetTime();
+
+document.addEventListener('DOMContentLoaded', initializeApp);
