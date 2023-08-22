@@ -1,3 +1,5 @@
+import renderBooks from './RenderBooks.js';
+
 const bookContainer = document.getElementById('books-container');
 const formSection = document.getElementById('form-section');
 const contactSection = document.getElementById('contact-section');
@@ -11,14 +13,17 @@ const InitializeApp = () => {
   for (let i = 0; i < navLinks.length; i += 1) {
     navLinks[i].addEventListener('click', () => {
       const current = document.getElementsByClassName('active');
+
       if (current.length > 0) {
-        current[0].className = current[0].className.replace(' active', '');
+        current[0].classList.remove('active');
       }
-      current.className += ' active';
+      navLinks[i].classList.add('active');
+
       if (navLinks[i].innerHTML === 'List') {
         formSection.style.display = 'none';
         contactSection.style.display = 'none';
         bookContainer.style.display = 'block';
+        renderBooks();
       } else if (navLinks[i].innerHTML === 'Add New') {
         formSection.style.display = 'block';
         contactSection.style.display = 'none';
