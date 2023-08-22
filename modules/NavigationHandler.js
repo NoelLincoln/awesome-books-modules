@@ -1,4 +1,4 @@
-export default function navHandler() {
+const navHandler = () => {
   const bookContainer = document.getElementById('books-container');
   const formSection = document.getElementById('form-section');
   const contactSection = document.getElementById('contact-section');
@@ -26,4 +26,6 @@ export default function navHandler() {
       }
     });
   }
-}
+};
+
+export default navHandler;
