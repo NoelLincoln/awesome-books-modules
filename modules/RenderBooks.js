@@ -1,12 +1,12 @@
 const article = document.getElementById('bookList');
 const savedBooks = JSON.parse(localStorage.getItem('savedBooks')) || [];
 
+const updateLocalStorage = () => {
+  localStorage.setItem('savedBooks', JSON.stringify(this.savedBooks));
+};
 const removeBook = (index) => {
   savedBooks.splice(index, 1);
   updateLocalStorage();
-};
-const updateLocalStorage = () => {
-  localStorage.setItem('savedBooks', JSON.stringify(this.savedBooks));
 };
 
 const renderBooks = () => {
